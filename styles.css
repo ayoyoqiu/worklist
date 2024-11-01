@@ -1,0 +1,300 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@700&display=swap');
+
+:root {
+    --primary-color: #001f3f;
+    --secondary-color: #f0f8ff;
+    --accent-color: #00a3e0;
+    --gradient-bg: linear-gradient(135deg, #001f3f, #003366);
+    --button-gradient: linear-gradient(135deg, #003366, #00a3e0);
+    --button-gradient-hover: linear-gradient(135deg, #00a3e0, #003366);
+    --title-gradient: linear-gradient(135deg, #002b56, #004080);
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--gradient-bg);
+    color: var(--secondary-color);
+}
+
+.header {
+    background: rgba(0, 31, 63, 0.9);
+    padding: 10px 20px; /* 减小上下内边距 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px; /* 设置固定高度 */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 图标和文字之间的间距 */
+}
+
+.logo i {
+    font-size: 1.5em; /* 调整图标大小 */
+}
+
+.logo .icon {
+    margin-right: 10px;
+    font-size: 1em; /* 调整图标大小 */
+    vertical-align: middle;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px; /* 稍微减小导航项之间的间距 */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1em; /* 稍微减小导航链接字体大小 */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: var(--accent-color);
+}
+
+.projects-module {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px; /* 减小上下内边距 */
+    border-radius: 15px;
+    margin: 30px auto; /* 减小上下外边距 */
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.module-header {
+    text-align: center;
+    margin-bottom: 25px; /* 减小下边距 */
+}
+
+.module-header h2 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+    background: var(--title-gradient);
+    padding: 15px;
+    text-align: center;
+}
+
+.project-title h3 {
+    color: var(--secondary-color);
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activity-time {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+
+.theme-module {
+    padding: 15px;
+    height: 200px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+.theme-title {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.theme-title .icon {
+    margin-right: 5px;
+}
+
+.theme-content {
+    font-size: 0.85em;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    padding-top: 5px;
+}
+
+.detail-link {
+    display: block;
+    padding: 12px;
+    background: var(--button-gradient);
+    color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: 0 0 10px 10px;
+}
+
+.detail-link:hover {
+    background: var(--button-gradient-hover);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 31, 63, 0.9);
+    color: var(--secondary-color);
+}
+
+/* 自定义滚动条样式 */
+.theme-module::-webkit-scrollbar {
+    width: 8px;
+}
+
+.theme-module::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-module::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+/* 在现有的 styles.css 文件末尾添加以下样式 */
+
+.content-module {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-module h2 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-module p {
+    color: var(--secondary-color);
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-details {
+    width: 100%;
+    max-width: 600px;
+}
+
+.project-name {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .project-info {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .project-image, .project-details {
+        width: 50%;
+    }
+}
+
+/* 在现有的样式基础上添加以下内容 */
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* 更新 logo 样式 */
+.logo img {
+    height: 30px; /* 调整为适当的大小 */
+    margin-right: 10px;
+    vertical-align: middle;
+}
